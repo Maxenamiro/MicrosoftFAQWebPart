@@ -1,0 +1,19 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "intrane-xt-accordion-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/intraneXtAccordion/IntraneXtAccordionWebPart.js",
+          "manifest": "./src/webparts/intraneXtAccordion/IntraneXtAccordionWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "IntraneXtAccordionWebPartStrings": "lib/webparts/intraneXtAccordion/loc/{locale}.js",
+    "ControlStrings": "node_modules/@pnp/spfx-controls-react/lib/loc/{locale}.js"
+  }
+}

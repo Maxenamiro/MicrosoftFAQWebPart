@@ -1,0 +1,18 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "18.18.0",
+    "sdksVersions": {},
+    "version": "1.21.1",
+    "libraryName": "intrane-xt-accordion",
+    "libraryId": "7f24e276-7cca-4418-ab07-e64cfd8f3151",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "IntraneXtAccordion",
+    "solutionShortDescription": "IntraneXtAccordion description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "webpart"
+  }
+}

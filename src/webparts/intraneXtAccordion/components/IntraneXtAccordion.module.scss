@@ -1,0 +1,109 @@
+@import '~@fluentui/react/dist/sass/References.scss';
+
+.intraneXtAccordion {
+	overflow: hidden;
+	padding: 1em;
+	color: '[theme:bodyText, default: #323130]';
+	color: var(--bodyText);
+
+	&.teams {
+		font-family: $ms-font-family-fallbacks;
+	}
+}
+
+.intraneXtRichTextEditor {
+	.ql-toolbar.ql-snow {
+		display: flex !important;
+		flex-wrap: wrap !important;
+		align-items: center !important;
+		background: #f8f9fa !important;
+		border: 1px solid #ddd !important;
+		border-bottom: none !important;
+		border-radius: 6px 6px 0 0 !important;
+		padding: 8px !important;
+
+		.ql-formats {
+			margin-right: 16px !important;
+			display: flex !important;
+			align-items: center !important;
+		}
+
+		button {
+			margin: 0 1px !important;
+			border-radius: 2px !important;
+
+			&:hover {
+				background: #e1e1e1 !important;
+			}
+		}
+	}
+
+	.ql-container.ql-snow {
+		border: 1px solid #ddd !important;
+		border-radius: 0 0 6px 6px !important;
+		border-top: none !important;
+		min-height: 120px;
+		font-family: 'Segoe UI', sans-serif;
+
+		.ql-editor {
+			padding: 12px !important;
+			font-size: 14px;
+			line-height: 1.5;
+
+			&.ql-blank::before {
+				color: #6c757d !important;
+				font-style: italic !important;
+			}
+
+			img {
+				max-width: 100% !important;
+				height: auto !important;
+				border-radius: 4px;
+				margin: 8px 0;
+			}
+		}
+	}
+}
+
+.intraneXtAccordion {
+	img {
+		max-width: 100% !important;
+		height: auto !important;
+		border-radius: 6px;
+		margin: 12px 0;
+		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+	}
+
+	div[style*='marginTop: 8px'] {
+		line-height: 1.6;
+
+		p {
+			margin-bottom: 12px;
+		}
+
+		ul,
+		ol {
+			margin: 8px 0;
+			padding-left: 24px;
+		}
+
+		li {
+			margin-bottom: 4px;
+		}
+	}
+}
+
+// Адаптивность
+@media (max-width: 768px) {
+	.intraneXtAccordion {
+		padding: 0.5em;
+	}
+
+	.intraneXtRichTextEditor {
+		.ql-toolbar.ql-snow {
+			.ql-formats {
+				margin-right: 8px !important;
+			}
+		}
+	}
+}
