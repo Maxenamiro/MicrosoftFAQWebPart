@@ -12,6 +12,7 @@ import {
 } from '@pnp/spfx-controls-react/lib/FilePicker'
 import { RichText } from '@pnp/spfx-controls-react/lib/RichText'
 import * as React from 'react'
+import styles from './IntraneXtAccordion.module.scss'
 
 export interface IQAItem {
 	question: string
@@ -74,45 +75,27 @@ export const IntraneXtAccordion: React.FC<IIntraneXtAccordionProps> = ({
 			setNewAnswer(
 				(prev) =>
 					prev +
-					`<img src="${imageUrl}" alt="Uploaded image" style="max-width: 100% !important; height: auto !important;" />`
+					`<div class="${styles.answerContent}"><img src="${imageUrl}" alt="Uploaded image" style="width: 100%; height: auto; display: block;" /></div>`
 			)
 		}
 		setShowFilePicker(false)
 	}
 
 	return (
-		<div className='intraneXtAccordion'>
+		<div className={styles.accordionContainer}>
 			{data.map((item, idx) => {
 				const isOpen = expandedIndex === idx
 				return (
 					<div
 						key={idx}
-						style={{
-							border: '1px solid #e1e1e1',
-							borderRadius: '6px',
-							marginBottom: '8px',
-							backgroundColor: isOpen ? '#fafafa' : 'white',
-							transition: 'all 0.2s ease',
-						}}
+						className={`${styles.accordionItem} ${isOpen ? styles.open : ''}`}
 					>
 						<div
-							style={{
-								display: 'flex',
-								justifyContent: 'space-between',
-								alignItems: 'center',
-								padding: '16px',
-								cursor: 'pointer',
-								fontWeight: 600,
-								userSelect: 'none',
-							}}
+							className={styles.accordionHeader}
 							onClick={() => toggleAccordion(idx)}
 						>
-							<span style={{ flex: 1, marginRight: '16px' }}>
-								{item.question}
-							</span>
-							<div
-								style={{ display: 'flex', alignItems: 'center', gap: '8px' }}
-							>
+							<span className={styles.questionText}>{item.question}</span>
+							<div className={styles.headerActions}>
 								{isEditMode && (
 									<IconButton
 										iconProps={{ iconName: 'Delete' }}
@@ -132,12 +115,9 @@ export const IntraneXtAccordion: React.FC<IIntraneXtAccordionProps> = ({
 									/>
 								)}
 								<span
-									style={{
-										transition: 'transform 0.2s ease',
-										transform: isOpen ? 'rotate(90deg)' : 'rotate(0deg)',
-										fontSize: '12px',
-										color: '#666',
-									}}
+									className={`${styles.accordionIcon} ${
+										isOpen ? styles.open : ''
+									}`}
 								>
 									▶
 								</span>
@@ -145,19 +125,10 @@ export const IntraneXtAccordion: React.FC<IIntraneXtAccordionProps> = ({
 						</div>
 
 						{isOpen && (
-							<div
-								style={{
-									padding: '16px',
-									borderTop: '1px solid #e1e1e1',
-									backgroundColor: 'white',
-								}}
-							>
+							<div className={styles.accordionContent}>
 								<div
 									dangerouslySetInnerHTML={{ __html: item.answer }}
-									style={{
-										lineHeight: 1.6,
-										minHeight: '20px',
-									}}
+									className={styles.answerContent}
 								/>
 							</div>
 						)}
@@ -166,15 +137,7 @@ export const IntraneXtAccordion: React.FC<IIntraneXtAccordionProps> = ({
 			})}
 
 			{isEditMode && (
-				<div
-					style={{
-						marginTop: '32px',
-						padding: '20px',
-						border: '2px dashed #e1e1e1',
-						borderRadius: '8px',
-						backgroundColor: '#fafafa',
-					}}
-				>
+				<div className={styles.editSection}>
 					<Stack tokens={{ childrenGap: 16 }}>
 						<TextField
 							label='New Question'
@@ -189,17 +152,8 @@ export const IntraneXtAccordion: React.FC<IIntraneXtAccordionProps> = ({
 						/>
 
 						<div>
-							<div
-								style={{
-									display: 'flex',
-									justifyContent: 'space-between',
-									alignItems: 'center',
-									marginBottom: '8px',
-								}}
-							>
-								<label style={{ fontWeight: 600, display: 'block' }}>
-									New Answer
-								</label>
+							<div className={styles.answerHeader}>
+								<label className={styles.answerLabel}>New Answer</label>
 								<PrimaryButton
 									text='Add Image'
 									onClick={() => setShowFilePicker(true)}
@@ -212,13 +166,7 @@ export const IntraneXtAccordion: React.FC<IIntraneXtAccordionProps> = ({
 								/>
 							</div>
 
-							<div
-								style={{
-									border: '1px solid #e1e1e1',
-									borderRadius: '4px',
-									overflow: 'hidden',
-								}}
-							>
+							<div className={styles.richTextContainer}>
 								<RichText
 									value={newAnswer}
 									onChange={(text) => {
@@ -226,7 +174,7 @@ export const IntraneXtAccordion: React.FC<IIntraneXtAccordionProps> = ({
 										return text
 									}}
 									isEditMode={true}
-									// editorClassName='intraneXtRichTextEditor'
+									className={styles.richTextEditor}
 								/>
 							</div>
 						</div>
