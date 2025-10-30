@@ -74,7 +74,7 @@ export const IntraneXtAccordion: React.FC<IIntraneXtAccordionProps> = ({
 			setNewAnswer(
 				(prev) =>
 					prev +
-					`<img src="${imageUrl}" alt="Uploaded image" style="max-width: 100%; height: auto;" />`
+					`<img src="${imageUrl}" alt="Uploaded image" style="max-width: 100% !important; height: auto !important;" />`
 			)
 		}
 		setShowFilePicker(false)
