@@ -1,73 +1,142 @@
-# intrane-xt-accordion
+Accordion Web Part without List
+🌐 Multifunctional Accordion for SharePoint with Rich Text and Image Support
 
-## Summary
+Here is some images of the web part in action:
+1. Add new accordion item
+(./assetsForGithub/addingaccordion.png)
 
-Short summary on functionality and used technologies.
 
-[picture of the solution in action, if possible]
 
-## Used SharePoint Framework Version
+🚀 Features
+✨ Core Functionality
+📝 Accordion Creation - Add unlimited question-answer items
 
-![version](https://img.shields.io/badge/version-1.21.1-green.svg)
+✏️ Inline Editing - Modify existing accordions without reloading
 
-## Applies to
+🗑️ Smart Deletion - Remove items with confirmation
 
-- [SharePoint Framework](https://aka.ms/spfx)
-- [Microsoft 365 tenant](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/set-up-your-developer-tenant)
+🖼️ Image Management - Upload and insert images directly from SharePoint
 
-> Get your own free development tenant by subscribing to [Microsoft 365 developer program](http://aka.ms/o365devprogram)
+🎯 Expand/Collapse - Smooth toggle animations
 
-## Prerequisites
+🎨 Rich Content Support
+📖 Rich Text Editor - Full formatting capabilities (bold, italic, lists, etc.)
 
-> Any special pre-requisites?
+🖼️ Image Integration - Drag & drop images with automatic responsive sizing
 
-## Solution
+🎭 HTML Content - Support for custom HTML in answers
 
-| Solution    | Author(s)                                               |
-| ----------- | ------------------------------------------------------- |
-| folder name | Author details (name, company, twitter alias with link) |
+📱 Responsive Design - Works perfectly on all devices
 
-## Version history
+⚙️ SharePoint Integration
+🔗 SPFx Compatible - Built with SharePoint Framework 1.15+
 
-| Version | Date             | Comments        |
-| ------- | ---------------- | --------------- |
-| 1.1     | March 10, 2021   | Update comment  |
-| 1.0     | January 29, 2021 | Initial release |
+🏢 SharePoint Context - Seamless integration with SharePoint environment
 
-## Disclaimer
+💾 Data Persistence - Automatic saving to web part properties
 
-**THIS CODE IS PROVIDED _AS IS_ WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING ANY IMPLIED WARRANTIES OF FITNESS FOR A PARTICULAR PURPOSE, MERCHANTABILITY, OR NON-INFRINGEMENT.**
+👥 Permission Aware - Respects SharePoint permissions
 
----
+🛠️ Installation
+Prerequisites
+SharePoint Online environment
 
-## Minimal Path to Awesome
+SPFx development environment (1.15.0 or later)
 
-- Clone this repository
-- Ensure that you are at the solution folder
-- in the command-line run:
-  - **npm install**
-  - **gulp serve**
+Node.js 16.x or later
 
-> Include any additional steps as needed.
+Setup Steps
+1. Clone the repository
+git clone https://github.com/your-username/intranext-accordion.git
+cd intranext-accordion
 
-## Features
+2. Install dependencies
+npm install
 
-Description of the extension that expands upon high-level summary above.
+3. Build the solution
+gulp build
 
-This extension illustrates the following concepts:
+4.Bundle Package
+gulp bundle --ship
 
-- topic 1
-- topic 2
-- topic 3
+5. Package the solution
+gulp package-solution --ship
 
-> Notice that better pictures and documentation will increase the sample usage and the value you are providing for others. Thanks for your submissions advance.
+6. Deploy the solution to SharePoint
+Upload .sppkg file to your SharePoint App Catalog
 
-> Share your web part with others through Microsoft 365 Patterns and Practices program to get visibility and exposure. More details on the community, open-source projects and other activities from http://aka.ms/m365pnp.
+Add web part to your SharePoint page
 
-## References
 
-- [Getting started with SharePoint Framework](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/set-up-your-developer-tenant)
-- [Building for Microsoft teams](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/build-for-teams-overview)
-- [Use Microsoft Graph in your solution](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/get-started/using-microsoft-graph-apis)
-- [Publish SharePoint Framework applications to the Marketplace](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/publish-to-marketplace-overview)
-- [Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp) - Guidance, tooling, samples and open-source controls for your Microsoft 365 development
+📖 Usage
+🎯 Adding New Accordion Items
+Enter Question - Type your question in the "New Accordion Item" field
+
+Create Answer - Use the Rich Text editor to format your answer
+
+Add Images - Click "Add image" to insert images from SharePoint
+
+Save - Click "Save Accordion" to add the item
+
+✏️ Editing Existing Items
+Enter Edit Mode - Click the edit (✏️) icon on any accordion item
+
+Modify Content - Update question and answer as needed
+
+Add More Images - Insert additional images while editing
+
+Save Changes - Click "Save" to apply changes or "Cancel" to discard
+
+🖼️ Image Management
+Supported Formats: GIF, JPG, JPEG, BMP, DIB, TIF, TIFF, ICO, PNG, JXR, SVG
+
+Automatic Optimization: Images are automatically resized for optimal display
+
+SharePoint Integration: Direct access to your SharePoint document libraries
+
+🔧 Key Components
+IntraneXtAccordion Component
+State Management: React hooks for efficient state handling
+
+Edit Modes: Separate states for viewing and editing
+
+File Picker Integration: SharePoint file picker for image selection
+
+Rich Text Editor
+Quill-based: Powerful WYSIWYG editor
+
+Custom Styling: SharePoint-consistent UI
+
+Image Support: Direct image embedding
+
+🎨 Customization
+Styling
+The component uses SCSS modules for styling. Key customizable aspects:
+
+Color schemes
+
+Animation timings
+
+Responsive breakpoints
+
+Icon styles
+
+Configuration
+Web part properties can be extended to include:
+
+Default expanded state
+
+Animation preferences
+
+Image size limits
+
+Custom CSS classes
+
+🙏 Acknowledgments
+SharePoint Framework Team - For the excellent SPFx platform
+
+Fluent UI Team - For the comprehensive UI component library
+
+PNP Controls - For the FilePicker and RichText components
+
+⭐ Star us on GitHub if you find this project helpful!
