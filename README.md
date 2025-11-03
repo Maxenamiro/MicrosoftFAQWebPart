@@ -2,9 +2,20 @@ Accordion Web Part without List
 🌐 Multifunctional Accordion for SharePoint with Rich Text and Image Support
 
 Here is some images of the web part in action:
-1. Add new accordion item
-(./assetsForGithub/addingaccordion.png)
 
+1. Add new accordion item
+
+2. Add image to accordion item via file picker
+
+3. Add image to accordion item via image link
+
+4. Add accordion
+
+5. Edit accordion
+
+6. Rich Text formatting
+
+7. Result
 
 
 🚀 Features
@@ -46,27 +57,27 @@ SPFx development environment (1.15.0 or later)
 Node.js 16.x or later
 
 Setup Steps
+
 1. Clone the repository
-git clone https://github.com/your-username/intranext-accordion.git
-cd intranext-accordion
+   git clone https://github.com/your-username/intranext-accordion.git
+   cd intranext-accordion
 
 2. Install dependencies
-npm install
+   npm install
 
 3. Build the solution
-gulp build
+   gulp build
 
 4.Bundle Package
 gulp bundle --ship
 
 5. Package the solution
-gulp package-solution --ship
+   gulp package-solution --ship
 
 6. Deploy the solution to SharePoint
-Upload .sppkg file to your SharePoint App Catalog
+   Upload .sppkg file to your SharePoint App Catalog
 
 Add web part to your SharePoint page
-
 
 📖 Usage
 🎯 Adding New Accordion Items
