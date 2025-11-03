@@ -4,18 +4,25 @@ Accordion Web Part without List
 Here is some images of the web part in action:
 
 1. Add new accordion item
+<img width="903" height="620" alt="addingaccordion" src="https://github.com/user-attachments/assets/f9f93f33-ba17-42a4-9e9b-cb060c51c888" />
 
 2. Add image to accordion item via file picker
+<img width="1317" height="789" alt="addingimageviafilepicker" src="https://github.com/user-attachments/assets/0ae67b2d-a13a-4254-882a-e404c39ec7a2" />
 
 3. Add image to accordion item via image link
+<img width="547" height="196" alt="addingimagevialink" src="https://github.com/user-attachments/assets/a1c9b385-62b9-4615-96cd-2cf8d6488e8d" />
 
 4. Add accordion
+<img width="734" height="698" alt="addingWebPart" src="https://github.com/user-attachments/assets/417d9630-a760-4221-8e87-e0450fc616d4" />
 
 5. Edit accordion
+<img width="758" height="731" alt="editAccordion" src="https://github.com/user-attachments/assets/2ac9f9c3-e5e8-4f4a-a43f-c14f123a313a" />
 
 6. Rich Text formatting
+<img width="493" height="569" alt="textFormatting" src="https://github.com/user-attachments/assets/75ec71dd-5338-488b-bc47-e65d08d18983" />
 
 7. Result
+<img width="794" height="673" alt="result" src="https://github.com/user-attachments/assets/f41ce86b-e3e2-487d-9a60-11f064326615" />
 
 
 🚀 Features
