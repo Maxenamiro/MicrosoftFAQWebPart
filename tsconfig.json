@@ -1,6 +1,8 @@
 {
   "extends": "./node_modules/@microsoft/rush-stack-compiler-5.3/includes/tsconfig-web.json",
   "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
     "target": "es5",
     "forceConsistentCasingInFileNames": true,
     "module": "esnext",

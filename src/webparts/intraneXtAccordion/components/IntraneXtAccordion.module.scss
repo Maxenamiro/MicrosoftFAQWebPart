@@ -146,28 +146,79 @@
 
 .richTextEditor {
 	:global {
+		.ql-toolbar .ms-Button-icon {
+			font-size: 0 !important;
+			height: auto !important;
+			align-items: center !important;
+			text-align: center !important;
+		}
+
+		.ql-toolbar .ms-Button-icon::after {
+			content: 'Text Settings';
+			// font-size: 12px;
+			font-family: 'Segoe UI', sans-serif;
+			// color: #333 !important;
+			// background: rgb(3, 120, 124) !important;
+			// margin: 5px !important;
+			outline: transparent !important;
+			position: relative !important;
+			-webkit-font-smoothing: antialiased !important;
+			font-size: 14px !important;
+			font-weight: 600 !important;
+			border: 1px solid rgb(3, 120, 124) !important;
+			border-radius: 2px !important;
+			box-sizing: border-box !important;
+			cursor: pointer !important;
+			display: inline-block !important;
+			padding: 0px 16px !important;
+			text-decoration: none !important;
+			text-align: center !important;
+			min-width: 80px !important;
+			height: 32px !important;
+			background-color: rgb(3, 120, 124) !important;
+			color: rgb(255, 255, 255) !important;
+			user-select: none !important;
+			margin: 0px 4px !important;
+			line-height: 100% !important;
+			align-content: center !important;
+		}
 		.ql-toolbar.ql-snow {
 			display: flex !important;
-			flex-wrap: wrap !important;
+			justify-content: flex-end !important;
 			align-items: center !important;
 			background: #f8f9fa !important;
 			border: 1px solid #ddd !important;
 			border-bottom: none !important;
 			border-radius: 6px 6px 0 0 !important;
-			padding: 8px !important;
+			padding: 4px 8px !important;
+			min-height: 40px !important;
+			height: 40px !important;
+			overflow: hidden !important;
+			flex-direction: column !important;
 
-			.ql-formats {
-				margin-right: 16px !important;
-				display: flex !important;
-				align-items: center !important;
+			& > *:not(:last-child) {
+				display: none !important;
 			}
 
-			button {
-				margin: 0 1px !important;
-				border-radius: 2px !important;
+			.ql-formats:last-child {
+				display: flex !important;
+				margin: 0 !important;
+				padding: 0 !important;
 
-				&:hover {
-					background: #e1e1e1 !important;
+				& > *:not(:last-child) {
+					display: none !important;
+				}
+
+				button:last-child {
+					display: block !important;
+					margin: 0 !important;
+					width: 32px !important;
+					height: 32px !important;
+					border-radius: 2px !important;
+
+					&:hover {
+						background: #e1e1e1 !important;
+					}
 				}
 			}
 		}
@@ -255,15 +306,5 @@
 	.editSection {
 		padding: 16px;
 		margin-top: 24px;
-	}
-
-	.richTextEditor {
-		:global {
-			.ql-toolbar.ql-snow {
-				.ql-formats {
-					margin-right: 8px !important;
-				}
-			}
-		}
 	}
 }
